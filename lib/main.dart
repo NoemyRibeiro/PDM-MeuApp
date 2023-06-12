@@ -1,38 +1,21 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
+import 'pagina_inicial.dart';
+
 void main() {
-  runApp(MeuApp());
+  runApp(const MyApp());
 }
 
-class MeuApp extends StatelessWidget {
-  const MeuApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: PaginaInicial(),
-    );
-  }
-}
-
-class PaginaInicial extends StatelessWidget {
-  const PaginaInicial({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Título do Meu App"),
-        backgroundColor: Colors.pink[500],
-      ),
-      body: Container(
-        alignment: Alignment.center,
-        color: Colors.pink[50],
-        child: ElevatedButton(
-          onPressed: () {},
-          child: Text("CLIQUE AQUI"),
-        ),
-      ),
     );
   }
 }
